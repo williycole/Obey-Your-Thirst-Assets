@@ -38,8 +38,6 @@ html, body, main, button {
 }
 
 
-
-
 ul, a {
     list-style: none;
     text-decoration: none;
@@ -50,9 +48,6 @@ h1, h2 {
     font-weight: 900;
 }
 
-body {
-    /* background-color:red; */
-}
 section {
     padding: 0;
 }
@@ -71,6 +66,7 @@ header {
     align-items: center;
     height: 5rem;
 }
+
 nav {
     display: flex;
     width: 100%;
@@ -102,9 +98,14 @@ nav {
 }
 
 .nav-logo-pos {
-    width: 5%;
+    width: 100%;
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 9rem;
 }
+
 #nav-logo {
     width: 80px;
 }
@@ -112,7 +113,25 @@ nav {
  /* Desktop View */
  @media (min-width:769px){
     .hamburger {
-      /* display: none; */
+      display: none;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+        position: fixed;
+        width: 100%;
+        height: 0;
+        z-index: 10;
+    }
+
+    .nav-links-social {
+        display: flex;
+    }
+    .nav-links-text {
+        display: flex;
     }
 
  }
@@ -125,12 +144,14 @@ nav {
  #hero{
     background-color: black;
  }
+
  .hero-image {
     padding-top: 80px;
     background-position: bottom;
     background-size: cover;
     width: 100%;
  }
+
  /* Desktop View */
  @media (min-width:769px){
     .hero-image {
@@ -140,6 +161,7 @@ nav {
         width: 100%; */
      }
  }
+
 #manifesto {
     background-color: black;
     color:white;
@@ -148,15 +170,20 @@ nav {
     text-transform: uppercase;
     font-style: italic;
 }
+
 #manifesto h1 {
     font-size: 3.5rem;
 }
+
 .manifesto-p {
     font-size: 1.2rem;
 }
+
 .strike-through {
-    text-transform: ;
+    text-decoration: line-through rgb(169, 248, 41) 10px;
+
 }
+
 .green-text {
     color:green;
 }
@@ -176,6 +203,9 @@ nav {
     display: flex;
     flex-direction: column;
 }
+.vid-fig-container{
+    padding: 20px;
+}
 
 .video-container h3 {
     font-size: 1rem;
@@ -188,8 +218,8 @@ nav {
     font-family: 'Times New Roman', Times, serif;
 }
 
- iframe {
-     width: 80%;
+ .youtube-video {
+     width: 100%;
      height: auto;
  }
 
@@ -198,10 +228,6 @@ nav {
          display: flex;
          flex-direction: row;
      }
-    iframe {
-        width: 80%;
-        height: 315px;
-    }
  }
 
 
@@ -218,12 +244,14 @@ nav {
     font-style: italic;
     margin: 5px 200px;
  }
+
  #tmw {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
  }
+
 #tmw-container {
     display: flex;
     flex-direction: column;
@@ -280,6 +308,7 @@ nav {
     margin: 5px 0;
     width: 100%;
 }
+
 @media (min-width:769px){
     #spotify-podcast-counter {
         display: flex;
@@ -290,20 +319,41 @@ nav {
     }
 
     #sprite-lockup-article {
-        width: 50%;
+        width: 80%;
+    }
+
+    #sprite-lockup-article figure{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     #sprite-lockup-article p {
-        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 25%;
         font-size: 1rem;
         padding-bottom: 50px;
     }
 
+    #spotify-media-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
 
 
     #spotify {
         display: flex;
+        padding: 50px;
         flex-direction: column;
+    }
+
+    #podcast {
+        padding: 50px;
     }
     .sprite-lockup {
         width: 50%;
@@ -311,6 +361,7 @@ nav {
 
     .spotify-frame {
         width: 100%;
+        height: 400px;
     }
     .green-button {
         width: 100%;
