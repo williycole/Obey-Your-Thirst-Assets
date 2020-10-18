@@ -1,0 +1,360 @@
+/*******************************************
+ *******************************************
+ *
+ *
+ *
+ * This file contains the styling for the actual theme, this
+ * is the file you need to edit to change the look of the
+ * theme.
+ *
+ *
+ *
+ *******************************************
+ *******************************************
+ *
+ * == INDEX PAGE CSS
+ *
+ * 00. common & reset css
+ * 01. header & nav
+ * 02. hero-area, landing, & manifesto
+ * 03. youtube
+ * 04. thirst most wanted & instagram
+ * 05. spotify, podcast, & counter
+ * 06. footer
+ * 07. extra & css effects */
+/*****************************
+ *   00. common & reset css
+ *****************************
+ *
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, main, button {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+ul, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+h1, h2 {
+    font-weight: 900;
+}
+
+body {
+    /* background-color:red; */
+}
+section {
+    padding: 0;
+}
+
+/*****************************
+ *   01. header & nav
+ *****************************
+ *
+ */
+
+header {
+    background-color:#228C37;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+nav {
+    display: flex;
+    width: 100%;
+}
+
+ /* Mobile View */
+ .hamburger {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+}
+
+ .line {
+    width: 15px;
+    height: 3px;
+    background: black;
+    margin: 3px;
+}
+
+#nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 40px;
+    height: 31vh;
+    width: 100%;
+    background-color:#228C37;
+}
+
+.nav-logo-pos {
+    width: 5%;
+    position: absolute;
+}
+#nav-logo {
+    width: 80px;
+}
+
+ /* Desktop View */
+ @media (min-width:769px){
+    .hamburger {
+      /* display: none; */
+    }
+
+ }
+/*****************************
+ *   02. hero-area, landing, & manifesto
+ *****************************
+ *
+ */
+ /* Mobile View */
+ #hero{
+    background-color: black;
+ }
+ .hero-image {
+    padding-top: 80px;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+ }
+ /* Desktop View */
+ @media (min-width:769px){
+    .hero-image {
+        /* padding-top: 80px;
+        background-position: bottom;
+        background-size: cover;
+        width: 100%; */
+     }
+ }
+#manifesto {
+    background-color: black;
+    color:white;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+#manifesto h1 {
+    font-size: 3.5rem;
+}
+.manifesto-p {
+    font-size: 1.2rem;
+}
+.strike-through {
+    text-transform: ;
+}
+.green-text {
+    color:green;
+}
+
+ /*****************************
+ *   03. youtube
+ *****************************
+ *
+ */
+#youtube{
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+ .video-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container h3 {
+    font-size: 1rem;
+    color: black;
+}
+
+.video-container figcaption {
+    color: black;
+    font-size: .8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ iframe {
+     width: 80%;
+     height: auto;
+ }
+
+ @media (min-width:769px){
+     .video-container{
+         display: flex;
+         flex-direction: row;
+     }
+    iframe {
+        width: 80%;
+        height: 315px;
+    }
+ }
+
+
+ /*****************************
+ *   04. thirst most wanted & instagram
+ *****************************
+ *
+ */
+ #tmw h1 {
+     text-align: center;
+    display: flex;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 5px 200px;
+ }
+ #tmw {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+#tmw-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#228C37;
+}
+
+
+#instagram-slideshow {
+    color: white;
+    background-color: black;
+}
+
+ #buy-now {
+    color: white;
+    background-color:#228C37;
+    border: 1px solid white;
+    padding: 5px 20px;
+    margin: 5px;
+ }
+
+
+ /*****************************
+ *   05. spotify, podcast, & counter
+ *****************************
+ *
+ */
+
+#spotify-podcast-counter {
+    background: url(./assetsAndImages//marjanblan-794QUz5-cso-unsplash.jpg);
+    background-size: cover;
+}
+
+#spotify-podcast-counter p {
+    font-size: .7rem;
+    text-align: center;
+}
+
+
+.sprite-lockup {
+    width: 100%;
+}
+
+.spotify-frame {
+    width: 100%;
+}
+
+.green-button {
+    background-color: #228C37;
+    font-size: 1rem;
+    color:white;
+    padding: 5px 0;
+    margin: 5px 0;
+    width: 100%;
+}
+@media (min-width:769px){
+    #spotify-podcast-counter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #sprite-lockup-article {
+        width: 50%;
+    }
+
+    #sprite-lockup-article p {
+        width: 50%;
+        font-size: 1rem;
+        padding-bottom: 50px;
+    }
+
+
+
+    #spotify {
+        display: flex;
+        flex-direction: column;
+    }
+    .sprite-lockup {
+        width: 50%;
+    }
+
+    .spotify-frame {
+        width: 100%;
+    }
+    .green-button {
+        width: 100%;
+    }
+
+}
+
+
+
+ /*****************************
+ *   06. footer
+ *****************************
+ *
+ */
+
+ #main-footer {
+     color:white;
+     background-color: #228C37;
+ }
+
+ .green-footer {
+    background-color:#228C37;
+ }
+
+ .section-footer-img {
+    width: 100%;
+}
+
+
+
+ /*****************************
+ *   07. extra & css effects
+ *****************************
+ *
+ */
+ .hover, .hover:visited {
+    color: white;
+}
+
+.hover:hover {
+    color:black;
+    /* add bottom border too*/
+}
+.hover2:hover {
+    color:black;
+    background: black;
+}
