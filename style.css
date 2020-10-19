@@ -507,7 +507,7 @@ figure h3 {
     width: 100%;
 }
 
-#site-counter {
+#contact-form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -567,7 +567,6 @@ figure h3 {
         width: 100%;
     }
 
-
     #spotify {
         display: flex;
         padding: 50px;
@@ -599,20 +598,71 @@ figure h3 {
  *
  */
 
- #main-footer {
-     color:white;
-     background-color: #228C37;
- }
+#main-footer {
+    color:white;
+    background-color: #228C37;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px;
+}
 
- .green-footer {
-    background-color:#228C37;
- }
+.green-footer {
+   background-color:#228C37;
+}
 
  .section-footer-img {
     width: 100%;
 }
 
+.footer-social-links {
+    padding-top: 20px;
+    display: flex;
+}
+.footer-ul {
+    padding-top: 20px;
+    padding: 5px;
+}
 
+.foot-item {
+    padding: 5px;
+}
+
+.footer-h4 {
+    font-size: 18px;
+}
+/* Desktop View */
+@media (min-width:900px){
+    #main-footer {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+    .footer-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 100px;
+    }
+    .footer-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 85px;
+    }
+    .copy-right-p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .footer-footer-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer-img {
+        width: 200px;
+    }
+}
 
  /*****************************
  *   08. extra & css effects

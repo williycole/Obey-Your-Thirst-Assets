@@ -179,11 +179,14 @@
                         </button>
                     </div>
 
-                    <div id="site-counter">
-                        <h2>This page has</h2>
-                        <h1 id="count">0</h1>
-                        <h2>views</h2>
-                    </div>
+
+                    <form id="contact-form" action="/" method="GET">
+                        <label for="name">First & Last Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="comments">comments...</label>
+                        <textarea id="comments" name="message" rows="10" cols="30"></textarea>
+                        <button class="hover2" id="submit" onclick="formValidator()">Submit</button>
+                    </form>
                 </div>
 
             </section>
@@ -193,21 +196,43 @@
 
 
         <footer id="main-footer">
-            <div>
-
+            <div class="footer-head">
+                <div>
+                    <img class="footer-img" src="assetsAndImages/sprite_nav_logo.png"
+                        alt="Button link for Sprite Spotify Playlist">
+                </div>
+                <div>
+                    <h4 class="footer-h4">Connect With Us</h4>
+                    <ul class="footer-social-links">
+                        <li class="foot-item"><a href="#"><i class="hover2 fab fa-facebook-f"></i></a></li>
+                        <li class="foot-item"><a href="#"><i class="hover2 fab fa-twitter"></i></a></li>
+                        <li class="foot-item"><a href="#"><i class="hover2 fab fa-youtube"></i></a></li>
+                        <li class="foot-item"><a href="#"><i class="hover2 fab fa-instagram"></i></a></li>
+                        <li class="foot-item"><a href="#"><i class="hover2 fab fa-spotify"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-h4">Flavors</h4>
+                    <ul class="footer-ul">
+                        <li>Spirte</li>
+                        <li>Sprite Zero</li>
+                        <li>Sprite Cherry</li>
+                        <li>Sprite Cherry Zero Sugar</li>
+                        <li>Sprite Tropical Mix</li>
+                        <li>Spirte Lymonade</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-h4">Buy Now</h4>
+                    <ul class="footer-ul">
+                        <li>Product Locator</li>
+                        <li>Amazon</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
+            <div class="footer-footer">
                 <p class="copy-right-p">&copy; 2020 The Coca-Cola Company All Rights Reserved</p>
-                <ul>
+                <ul class="footer-footer-ul">
                     <li><a>Contact Us | </a></li>
                     <li><a>FAQs | </a></li>
                     <li><a>Terms and Conditions | </a></li>
