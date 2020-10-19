@@ -514,12 +514,30 @@ figure h3 {
     text-align: center;
     color: #228C37;
     font-size: 3rem;
-    border: 10px solid white;
+    border: 10px solid #228C37;;
     padding: 25px;
     text-transform: uppercase;
+    width: 35%;
 }
 
-#site-counter h2 {
+#submit {
+    border: 5px solid white;
+    background:#228C37;
+    color: white;
+    text-transform: uppercase;
+    font-size: .5em;
+    padding: 10px;
+}
+
+#name {
+    padding: 15px 5px;
+}
+
+#comments {
+    padding:  100px 5px;
+}
+
+/* #site-counter h2 {
     text-decoration: underline;
 }
 
@@ -528,7 +546,7 @@ figure h3 {
     background: white;
     margin: 0 150px;
     border: 3px solid #228C37;;
-}
+} */
 
 
 @media (min-width:900px){
@@ -682,3 +700,7 @@ figure h3 {
     color: white;
 }
 
+#submit:hover {
+    background-color:black;
+    color: white;
+}

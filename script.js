@@ -16,11 +16,15 @@ function formValidator() {
   const comments = document.getElementById('comments');
   const form = document.getElementById('contact-form');
   const submit = document.getElementById('submit');
-  if(name.value=== '' || name.value == null  && comments.value === '' || comments.value == null){
-      false;
+  if(name.value=== '' || name.value == null ){
+      console.log('it works');
       alert('Please provide your full name and comments before submitting the form.');
+      return false;
+
+  }else if(comments.value==='' || comments.value == null){
+      alert('Please provide your full name and comments before submitting the form.');
+      return false;
   }else {
-      alert('Your form as been submited!');
+      return true;
   }
 }
-
