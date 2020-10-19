@@ -48,6 +48,10 @@ h1, h2 {
     font-weight: 900;
 }
 
+h4 {
+    font-size: .8rem;
+}
+
 section {
     padding: 0;
 }
@@ -131,6 +135,7 @@ nav {
     .nav-links-social {
         display: flex;
     }
+
     .nav-links-text {
         display: flex;
     }
@@ -153,31 +158,28 @@ nav {
     width: 100%;
  }
 
- /* Desktop View */
- @media (min-width:769px){
-    .hero-image {
-        /* padding-top: 80px;
-        background-position: bottom;
-        background-size: cover;
-        width: 100%; */
-     }
- }
-
 #manifesto {
     background-color: black;
-    color:white;
+    color: white;
     display: block;
     text-align: center;
     text-transform: uppercase;
     font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#manifesto h1 {
+
+.manifesto-h1 {
     font-size: 3.5rem;
+    text-align: center;
+
 }
 
 .manifesto-p {
     font-size: 1.2rem;
+
 }
 
 .strike-through {
@@ -189,6 +191,32 @@ nav {
     color:green;
 }
 
+ /* Tablet/Landscape View */
+@media (min-width: 900px){
+    .manifesto-h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 0 30%;
+    }
+
+    .manifesto-p {
+        font-size: 1.2rem;
+        /* margin: 0 30%; */
+    }
+  }
+ /* Desktop View */
+ @media (min-width:1600px){
+    .manifesto-h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 0 40%;
+    }
+
+    .manifesto-p {
+        font-size: 1.2rem;
+        margin: 0 40%;
+    }
+  }
  /*****************************
  *   03. youtube
  *****************************
@@ -224,11 +252,32 @@ nav {
      height: auto;
  }
 
- @media (min-width:769px){
-     .video-container{
+ @media (min-width:470px){
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .youtube-video {
+        width: 100%;
+        height: 250px;
+    }
+ }
+
+ @media (min-width:1200px){
+     .video-container {
          display: flex;
          flex-direction: row;
+         justify-content: center;
+         align-items: center;
      }
+
+     .youtube-video {
+        width: 550px;
+        height: 350px;
+    }
  }
 
 
@@ -237,13 +286,19 @@ nav {
  *****************************
  *
  */
- #tmw h1 {
-     text-align: center;
+.tmw-h1-pos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ .tmw-h1 {
+    text-align: center;
     display: flex;
     font-size: 2.5rem;
     text-transform: uppercase;
     font-style: italic;
-    margin: 5px 200px;
+    width: 50%;
  }
 
  #tmw {
@@ -259,12 +314,7 @@ nav {
     justify-content: center;
     align-items: center;
     background-color:#228C37;
-}
-
-
-#instagram-slideshow {
-    color: white;
-    background-color: black;
+    width: 100%;
 }
 
  #buy-now {
@@ -275,7 +325,10 @@ nav {
     margin: 5px;
  }
 
-
+ #instagram-slideshow {
+    color: white;
+    background-color: black;
+}
  /*****************************
  *   05. spotify, podcast, & counter
  *****************************
