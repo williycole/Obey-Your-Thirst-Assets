@@ -18,10 +18,11 @@
  * 01. header & nav
  * 02. hero-area, landing, & manifesto
  * 03. youtube
- * 04. thirst most wanted & instagram
- * 05. spotify, podcast, & counter
- * 06. footer
- * 07. extra & css effects */
+ * 04. thirst most wanted
+ * 05. instagram
+ * 06. spotify, podcast, & counter
+ * 07. footer
+ * 08. extra & css effects */
 /*****************************
  *   00. common & reset css
  *****************************
@@ -56,6 +57,24 @@ section {
     padding: 0;
 }
 
+.green-text {
+    color:#228C37;
+}
+
+.fa-spotify {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: #228C37;
+}
+.fab {
+    font-size: 0.8rem;
+    padding: 10px;
+    border-radius: 50%;
+    color: #228C37;
+    background-color: white;
+}
 /*****************************
  *   01. header & nav
  *****************************
@@ -69,11 +88,6 @@ header {
     display: flex;
     align-items: center;
     height: 5rem;
-}
-
-nav {
-    display: flex;
-    width: 100%;
 }
 
  /* Mobile View */
@@ -91,14 +105,37 @@ nav {
     margin: 3px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 #nav-links {
     display: none;
     flex-direction: column;
     position: fixed;
-    margin-top: 40px;
-    height: 31vh;
+    margin-top: 80px;
+    height: 0;
     width: 100%;
+}
+
+.nav-links-text {
     background-color:#228C37;
+    padding: 10px;
+    border-bottom: solid 2px white;
+}
+
+.nav-links-social {
+    display: flex;
+    flex-direction: row;
+    background-color:#228C37;
+    padding: 10px;
+    border-bottom: solid 2px white;
+}
+
+.nav-item {
+    padding: 0 2%;
 }
 
 .nav-logo-pos {
@@ -114,33 +151,62 @@ nav {
     width: 80px;
 }
 
- /* Desktop View */
+ /* Tablet View */
  @media (min-width:769px){
     .hamburger {
       display: none;
     }
 
-    #nav-links {
+    nav {
+        height: 50px;
+    }
+
+    #nav-links{
         margin: 0;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-content: center;
+        padding: 0 80px;
         position: fixed;
         width: 100%;
-        height: 0;
+        height: auto;
         z-index: 10;
     }
 
-    .nav-links-social {
-        display: flex;
-    }
-
     .nav-links-text {
-        display: flex;
+        width: inherit;
+        width: 40%;
+        padding: 0 15% 0 0%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: none;
+        background: transparent;
     }
 
+    .nav-links-social {
+        padding: 0px 0 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: none
+    }
+    .nav-item {
+        padding: 0 2%;
+        border-bottom:none ;
+    }
  }
+
+  /* Desktop View */
+  @media (min-width:1200px){
+    .nav-links-social {
+        padding: 0px 0 0 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: none
+    }
+  }
 /*****************************
  *   02. hero-area, landing, & manifesto
  *****************************
@@ -151,12 +217,12 @@ nav {
     background-color: black;
  }
 
- .hero-image {
-    padding-top: 80px;
-    background-position: bottom;
-    background-size: cover;
-    width: 100%;
- }
+.hero-image {
+   padding-top: 80px;
+   background-position: bottom;
+   background-size: cover;
+   width: 100%;
+}
 
 #manifesto {
     background-color: black;
@@ -168,138 +234,155 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-
-.manifesto-h1 {
-    font-size: 3.5rem;
-    text-align: center;
-
-}
-
-.manifesto-p {
-    font-size: 1.2rem;
-
+    padding: 0;
 }
 
 .strike-through {
     text-decoration: line-through rgb(169, 248, 41) 10px;
-
 }
 
-.green-text {
-    color:green;
+.manifesto-h1 {
+    padding-top: 20px;
+    font-size: 3.5rem;
+    text-align: center;
 }
 
+.manifesto-p {
+    font-size: 1.2rem;
+}
  /* Tablet/Landscape View */
-@media (min-width: 900px){
+@media (min-width: 500px){
+    #manifesto {
+        padding: 0 5%;
+    }
     .manifesto-h1 {
-        font-size: 3.5rem;
+        padding-top: 50px;
+        font-size: 4.3rem;
         text-align: center;
-        margin: 0 30%;
     }
 
     .manifesto-p {
-        font-size: 1.2rem;
-        /* margin: 0 30%; */
+        font-size: 1.4rem;
     }
   }
+  @media (min-width:1100px){
+    #manifesto {
+        padding: 0 20%;
+    }
+    .manifesto-h1 {
+        font-size: 4.8rem;
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .manifesto-p {
+        font-size: 1.6rem;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
  /* Desktop View */
- @media (min-width:1600px){
+ @media (min-width:1400px){
+    #manifesto {
+        padding: 0 20%;
+    }
     .manifesto-h1 {
-        font-size: 3.5rem;
+        font-size: 5.3rem;
         text-align: center;
-        margin: 0 40%;
+        padding-top: 100px;
+        padding-left: 22%;
+        padding-right: 22%;
     }
 
     .manifesto-p {
-        font-size: 1.2rem;
-        margin: 0 40%;
+        font-size: 2.2rem;
+        padding-left: 15%;
+        padding-right: 15%;
     }
-  }
+}
+
  /*****************************
  *   03. youtube
  *****************************
  *
  */
-#youtube{
-    display: flex;
-    flex-direction: column;
-    background: white;
-}
-
- .video-container{
-    display: flex;
-    flex-direction: column;
-}
-.vid-fig-container{
-    padding: 20px;
-}
-
-.video-container h3 {
-    font-size: 1rem;
-    color: black;
-}
-
-.video-container figcaption {
-    color: black;
-    font-size: .8rem;
-    font-family: 'Times New Roman', Times, serif;
-}
-
- .youtube-video {
-     width: 100%;
-     height: auto;
- }
-
- @media (min-width:470px){
-    .video-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .youtube-video {
-        width: 100%;
-        height: 250px;
-    }
- }
-
- @media (min-width:1200px){
-     .video-container {
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         align-items: center;
-     }
-
-     .youtube-video {
-        width: 550px;
-        height: 350px;
-    }
- }
-
-
- /*****************************
- *   04. thirst most wanted & instagram
- *****************************
- *
- */
-.tmw-h1-pos {
+#youtube {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
- .tmw-h1 {
-    text-align: center;
+.video-container {
+
+    /* padding: 0 25%; */
+
+}
+
+.vid-fig-container {
     display: flex;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-style: italic;
-    width: 50%;
- }
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+}
+
+figure h3 {
+    font-size: 1.8rem;
+}
+
+.vid-caption {
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 10%;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.youtube-video {
+    width: 100%;
+    height: 350px;
+}
+
+
+@media (min-width:1300px){
+    #youtube {
+        padding: 0 180px;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 50px;
+    }
+
+    figure h3 {
+        font-size: 1.8rem;
+    }
+
+    .vid-caption {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.1rem;
+        padding-right: 10%;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .youtube-video {
+        width: 750px;
+        height: 350px;
+    }
+
+}
+
+
+ /*****************************
+ *   04. thirst most wanted
+ *****************************
+ *
+ */
 
  #tmw {
     display: flex;
@@ -315,22 +398,83 @@ nav {
     align-items: center;
     background-color:#228C37;
     width: 100%;
+    padding: 25px;
 }
 
- #buy-now {
-    color: white;
-    background-color:#228C37;
-    border: 1px solid white;
-    padding: 5px 20px;
-    margin: 5px;
- }
+.tmw-h-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
- #instagram-slideshow {
+}
+
+.tmw-h1 {
     color: white;
-    background-color: black;
+    width: 60%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.buy-now {
+    padding: 10px 25px;
+    width: 50%;
+    background-color:#228C37;
+    border: solid white 2px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+@media (min-width:1300px){
+    #tmw-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tmw-h-btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .tmw-h1 {
+        color: white;
+        width: 50%;
+        text-align: center;
+        font-size: 5rem;
+        text-transform: uppercase;
+    }
+
+    .buy-now {
+        padding:10px 25px;
+        width: 15%;
+        background-color:#228C37;
+        border: solid white 2px;
+        color: white;
+        text-transform: uppercase;
+    }
 }
  /*****************************
- *   05. spotify, podcast, & counter
+ *   05. instagram
+ *****************************
+ *
+ */
+
+ #instagram-slideshow {
+     background: black;
+     color: white;
+ }
+
+
+
+
+ /*****************************
+ *   06. spotify, podcast, & counter
  *****************************
  *
  */
@@ -426,7 +570,7 @@ nav {
 
 
  /*****************************
- *   06. footer
+ *   07. footer
  *****************************
  *
  */
@@ -447,7 +591,7 @@ nav {
 
 
  /*****************************
- *   07. extra & css effects
+ *   08. extra & css effects
  *****************************
  *
  */
@@ -457,9 +601,10 @@ nav {
 
 .hover:hover {
     color:black;
-    /* add bottom border too*/
 }
+
 .hover2:hover {
-    color:black;
-    background: black;
+    background-color:black;
+    color: white;
 }
+
