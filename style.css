@@ -319,12 +319,6 @@ nav {
     justify-content: center;
 }
 
-.video-container {
-
-    /* padding: 0 25%; */
-
-}
-
 .vid-fig-container {
     display: flex;
     flex-direction: column;
