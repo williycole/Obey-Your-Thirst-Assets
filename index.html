@@ -6,6 +6,7 @@
     <meta name="description" content="filler text">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/f0e8d23775.js" crossorigin="anonymous"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -13,17 +14,11 @@
 
 <body>
     <header>
-
-
-
         <button class="hamburger" onclick="myFunction()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </button>
-
-
-
 
         <nav>
             <div id="nav-links">
@@ -43,14 +38,13 @@
         </nav>
 
         <figure class="nav-logo-pos">
-            <img src="./assetsAndImages/mobile_sprite_logo_nav.png" id="nav-logo" alt="filler text">
+            <img src="./assetsAndImages/mobile_sprite_logo_nav.png" id="nav-logo" alt="Image of the Sprite Logo.">
         </figure>
 
     </header>
 
     <body>
         <main>
-
 
             <section id="hero">
                 <img src="./assetsAndImages/hero_new.jpg"
@@ -83,14 +77,14 @@
                         Whatever It Is You Want, <span class="green-text">#Thirstforyours</span>
                     </p>
                 </div>
-
-
             </section>
             <footer class="section-footer">
                 <img src="./assetsAndImages/thirst_for_yours.png"
                     alt="Image used as sections divider that depicts a thirst for your sticker."
                     class="section-footer-img">
             </footer>
+
+
 
             <section id="youtube">
                 <div class="video-container">
@@ -144,14 +138,15 @@
 
             <section id="instagram-slideshow">
                 <h3>Follow Us <img src="./assetsAndImages/twitter-powerade.png " class="social-link"></h3>
-                <!-- slide show goes here -->
+                <div class="elfsight-app-8558e878-f0e9-47c8-b649-8712c4324b98"></div>
             </section>
 
 
             <section id="spotify-podcast-counter">
                 <article id="sprite-lockup-article">
                     <figure>
-                        <img src="./assetsAndImages/sprite_way_lockup.png" alt="" class="sprite-lockup">
+                        <img src="./assetsAndImages/sprite_way_lockup.png" alt="Image of the Sprite Way logo."
+                            class="sprite-lockup">
                     </figure>
                     <p class="green-text">
                         You know them - The ones who are always in the studio, opening shows and dropping new heat all
@@ -169,31 +164,30 @@
                         </iframe>
                         <button class="green-button">
                             <img src="assetsAndImages/spotify.png" alt="Button link for Sprite Spotify Playlist">
-                            visit
-                            our
-                            playlist
+                            <a href="https://open.spotify.com/playlist/0F9GnzKQchH4mZ56dysDJa">
+                                visit
+                                our
+                                playlist
+                            </a>
                         </button>
                         <button class="green-button">
-                            <i class="fas fa-podcast"></i>
-                            Go to podcast
+                            <i class="fas fa-podcast">
+                                <a href="https://open.spotify.com/show/0JPIX8qXStBBqSFg6vVTUS">Go to podcast</a>
+                            </i>
                         </button>
                     </div>
 
 
                     <form id="contact-form" action="https://airform.io/william.cole.boren@gmail.com" method="post">
+                        <h4 class="green-text">First & Last Name</h4>
                         <input id="name" type="text" name="name" placeholder="Enter your name">
+                        <h4 class="green-text">Tell Us how we are doing!</h4>
                         <textarea id="comments" name="message" placeholder="Enter your message"></textarea>
                         <button id="submit" onmouseover="formValidator()">Send</button>
                     </form>
-
                 </div>
-
             </section>
-
-
         </main>
-
-
         <footer id="main-footer">
             <div class="footer-head">
                 <div>
@@ -213,33 +207,32 @@
                 <div>
                     <h4 class="footer-h4">Flavors</h4>
                     <ul class="footer-ul">
-                        <li>Spirte</li>
-                        <li>Sprite Zero</li>
-                        <li>Sprite Cherry</li>
-                        <li>Sprite Cherry Zero Sugar</li>
-                        <li>Sprite Tropical Mix</li>
-                        <li>Spirte Lymonade</li>
+                        <li><a href="#" class="hover">Spirte</a></li>
+                        <li><a href="#" class="hover">Sprite Zero</a></li>
+                        <li><a href="#" class="hover">Sprite Cherry</a></li>
+                        <li><a href="#" class="hover">Sprite Cherry Zero Sugar</a></li>
+                        <li><a href="#" class="hover">Sprite Tropical Mix</a></li>
+                        <li><a href="#" class="hover">Spirte Lymonade</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-h4">Buy Now</h4>
                     <ul class="footer-ul">
-                        <li>Product Locator</li>
-                        <li>Amazon</li>
+                        <li><a href="#" class="hover">Product Locator</a></li>
+                        <li><a href="#" class="hover">Amazon</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-footer">
                 <p class="copy-right-p">&copy; 2020 The Coca-Cola Company All Rights Reserved</p>
                 <ul class="footer-footer-ul">
-                    <li><a>Contact Us | </a></li>
-                    <li><a>FAQs | </a></li>
-                    <li><a>Terms and Conditions | </a></li>
-                    <li><a>Privacy | </a></li>
-                    <li><a>About our Ads | </a></li>
-                    <li><a>Sitemap | </a></li>
-                    <li><a>sip & scan</a></li>
-                    <li><a></a></li>
+                    <li><a href="#" class="hover">Contact Us</a>|</li>
+                    <li><a href="#" class="hover">FAQs</a>|</li>
+                    <li><a href="#" class="hover">Terms and Conditions</a>|</li>
+                    <li><a href="#" class="hover">Privacy</a>|</li>
+                    <li><a href="#" class="hover">About our Ads</a>|</li>
+                    <li><a href="#" class="hover">Sitemap </a>|</li>
+                    <li><a href="#" class="hover">sip & scan</a></li>
                 </ul>
             </div>
         </footer>

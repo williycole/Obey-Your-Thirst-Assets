@@ -42,6 +42,11 @@ html, body, main, button {
 ul, a {
     list-style: none;
     text-decoration: none;
+    color:white;
+}
+
+a:visited {
+    color:white;
 }
 
 
@@ -479,6 +484,7 @@ figure h3 {
  *
  */
 
+ /* Mobile View */
 #spotify-podcast-counter {
     background: url('./assetsAndImages//marjanblan-794QUz5-cso-unsplash.jpg');
     background-size: cover;
@@ -502,22 +508,25 @@ figure h3 {
     background-color: #228C37;
     font-size: 1rem;
     color:white;
-    padding: 5px 0;
-    margin: 5px 0;
+    padding: 10px 0;
+    margin: 10px 0;
     width: 100%;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
 }
+
 
 #contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     text-align: center;
     color: #228C37;
     font-size: 3rem;
     border: 10px solid #228C37;;
     padding: 25px;
+    margin: 10%;
     text-transform: uppercase;
-    width: 35%;
+    width: 80%;
 }
 
 #submit {
@@ -537,18 +546,7 @@ figure h3 {
     padding:  100px 5px;
 }
 
-/* #site-counter h2 {
-    text-decoration: underline;
-}
-
-#count {
-    font-size: 10rem;
-    background: white;
-    margin: 0 150px;
-    border: 3px solid #228C37;;
-} */
-
-
+/* Tablet View */
 @media (min-width:900px){
     #spotify-podcast-counter {
         display: flex;
@@ -583,11 +581,12 @@ figure h3 {
         display: flex;
         flex-direction: row;
         width: 100%;
+        justify-content: center;
+        align-items: end;
     }
 
     #spotify {
         display: flex;
-        padding: 50px;
         flex-direction: column;
     }
 
@@ -605,8 +604,42 @@ figure h3 {
     .green-button {
         width: 100%;
     }
-
 }
+
+/* Desktop View */
+@media (min-width:1300px){
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        color: #228C37;
+        font-size: 3rem;
+        border: 10px solid #228C37;;
+        padding: 25px;
+        text-transform: uppercase;
+        width: 50%;
+    }
+
+    #submit {
+        border: 5px solid white;
+        background:#228C37;
+        color: white;
+        text-transform: uppercase;
+        font-size: .5em;
+        padding: 10px;
+    }
+
+    #name {
+        padding: 15px 5px;
+    }
+
+    #comments {
+        padding:  100px 5px;
+    }
+}
+
+
 
 
 

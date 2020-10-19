@@ -10,7 +10,7 @@ function myFunction() {
 }
 
 
-// contact form validation
+// Contact form validation
 function formValidator() {
   const name = document.getElementById('name');
   const comments = document.getElementById('comments');
