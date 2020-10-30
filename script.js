@@ -10,27 +10,30 @@ function myFunction() {
 }
 
 
-// Contact form validation
-function formValidator() {
-  const name = document.getElementById('name');
-  const comments = document.getElementById('comments');
-  const form = document.getElementById('contact-form');
-  const submit = document.getElementById('submit');
-  if(name.value === '' || name.value == null ){
-      console.log('it works');
-      alert('Please provide your full name and comments before submitting the form.');
-      return false;
+// JS animations
+//// Notes to self for further learning
+//// here I query my footer image, and use the classlist from prototype
+//// to add and remove the spin class
+const footerImg = document.querySelector('.footer-img');
+footerImg.classList.add('spin');
+footerImg.classList.remove('spin');
+// console.log(footerImg.classList);
 
-  }else if(comments.value === '' || comments.value == null){
-      alert('Please provide your full name and comments before submitting the form.');
-      return false;
-  }else {
-      return true;
-  }
+//// next I create a function called toggleSpin and grab that footer image
+//// to toggle the add remove seen above
+function toggleSpin() {
+footerImg.classList.toggle('spin');
+navLogo.classList.toggle('spin');
 }
+//// finally I add an event listener and pass reference
+//// to my toggleSpin funciton
+footerImg.addEventListener('click', toggleSpin);
 
-//page counter
-function btnAnimate() {
 
-}
+//// here I do the same as above but with the header image
+const navLogo = document.querySelector('.nav-logo');
+navLogo.classList.add('spin');
+navLogo.classList.remove('spin');
+
+
 

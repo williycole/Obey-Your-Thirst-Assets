@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/f0e8d23775.js" crossorigin="anonymous"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -38,7 +37,10 @@
         </nav>
 
         <figure class="nav-logo-pos">
-            <img src="./assetsAndImages/mobile_sprite_logo_nav.png" id="nav-logo" alt="Image of the Sprite Logo.">
+            <a class="nav-a" href="#hero">
+                <img src="./assetsAndImages/mobile_sprite_logo_nav.png" id="nav-logo" alt="Sprite Logo."
+                    class="nav-logo spin">
+            </a>
         </figure>
 
     </header>
@@ -162,7 +164,7 @@
                         <iframe src="https://open.spotify.com/embed/playlist/0F9GnzKQchH4mZ56dysDJa"
                             class="spotify-frame" frameborder="0" allowtransparency="true" allow="encrypted-media">
                         </iframe>
-                        <button class="green-button" onmouseover="btnAnimate()">
+                        <button class="green-button">
                             <img src="assetsAndImages/spotify.png" alt="Button link for Sprite Spotify Playlist">
                             <a href="https://open.spotify.com/playlist/0F9GnzKQchH4mZ56dysDJa">
                                 visit
@@ -170,7 +172,7 @@
                                 playlist
                             </a>
                         </button>
-                        <button class="green-button" onmouseover="btnAnimate()">
+                        <button class="green-button">
                             <i class="fas fa-podcast">
                                 <a href="https://open.spotify.com/show/0JPIX8qXStBBqSFg6vVTUS">Go to podcast</a>
                             </i>
@@ -179,11 +181,17 @@
 
 
                     <form id="contact-form" action="https://airform.io/william.cole.boren@gmail.com" method="post">
-                        <h4 class="green-text">First & Last Name</h4>
-                        <input id="name" type="text" name="name" placeholder="Enter your name">
-                        <h4 class="green-text">Tell Us how we are doing!</h4>
+                        <label class="form-label green-text" for="name">
+                            First & Last Name
+                        </label>
+                        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                        <label class="form-label green-text" for="name">
+                            Tell Us how we are doing!
+                        </label>
                         <textarea id="comments" name="message" placeholder="Enter your message"></textarea>
-                        <button id="submit" onmouseover="formValidator()">Send</button>
+                        <button id="submit" type="submit">
+                            Send
+                        </button>
                     </form>
 
                 </div>
@@ -192,8 +200,10 @@
         <footer id="main-footer">
             <div class="footer-head">
                 <div>
-                    <img class="footer-img" src="assetsAndImages/sprite_nav_logo.png"
-                        alt="Button link for Sprite Spotify Playlist">
+                    <a class="footer-a" href="#hero">
+                        <img class="footer-img spin" src="assetsAndImages/sprite_nav_logo.png"
+                            alt="Button link for Sprite Spotify Playlist">
+                    </a>
                 </div>
                 <div>
                     <h4 class="footer-h4">Connect With Us</h4>
@@ -237,6 +247,7 @@
                 </ul>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 
 </html>
