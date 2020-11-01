@@ -514,6 +514,22 @@ figure h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+#spotify-media-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
 #contact-form {
     display: flex;
@@ -523,7 +539,7 @@ figure h3 {
     font-size: 3rem;
     border: 10px solid #228C37;;
     padding: 25px;
-    margin: 10%;
+    /* margin: 10%; */
     text-transform: uppercase;
     width: 80%;
 }
@@ -621,7 +637,7 @@ figure h3 {
         border: 10px solid #228C37;;
         padding: 25px;
         text-transform: uppercase;
-        width: 50%;
+        width: 100%;
     }
 
     #submit {
