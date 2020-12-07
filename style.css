@@ -93,6 +93,7 @@ header {
     display: flex;
     align-items: center;
     height: 5rem;
+    z-index: 20;
 }
 
  /* Mobile View */
@@ -152,11 +153,16 @@ nav {
     padding: 0 9rem;
 }
 
-.nav-logo {
+#nav-logo {
     transition: all .3s ease-in-out;
     width: 80px;
 }
-.nav-a:hover, .nav-log:hover {
+
+.nav-a {
+    z-index: 20;
+}
+
+.nav-a:hover {
     transform: scale(.8);
     transition: all .3s ease-in-out;
 }
@@ -468,79 +474,67 @@ figure h3 {
  *****************************
  *
  */
- #instagram-slideshow h3 {
+ #instagram-section {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.insta-link {
+    color: black;
+}
+
+.insta-link:hover {
+    color: white;
+    background: black;
+}
+
+ #instagram-section h3 {
      text-align: center;
      padding: 1rem;
+     text-transform: uppercase;
+     font-size: 1.8rem;
  }
 
- #instagram-slideshow h3::before,
- #instagram-slideshow h3::after {
+ #instagram-section h3::before,
+ #instagram-section h3::after {
     display: inline-block;
     content: "";
-    border-top: white solid 2px;
-    width: 4rem;
+    border-top: #228C37 solid 4px;
+    width: 3.5rem;
     margin: .5rem;
  }
 
  /* Mobile View */
-.slide-show-controls {
+#images-container {
     display: flex;
-    position: absolute;
-    top: 173rem;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    width: 100%;
-    z-index: 25;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
 }
 
-
-#slideshow {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    padding: 2rem 0;
+.instagram-pic {
+    width: 70%;
 }
-
-.silde-show-media {
-    width: 28rem;
-}
-
-/* .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  } */
-
- #instagram-slideshow {
-     background: black;
-     color: white;
- }
 
 /* Desktop View */
-@media(min-width: 768){
-    .slide-show-controls {
+@media(min-width: 768px){
+    #images-container {
         display: flex;
-        position: absolute;
-        top: 224rem;
         flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem;
-        width: 100%;
-        z-index: 25;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 5rem;
     }
 
-    .silde-show-media {
-        width: 25rem;
+    .instagram-pic {
+        padding: .2rem;
+        width:20%;
     }
 }
 
@@ -742,8 +736,32 @@ figure h3 {
     font-size: 18px;
     text-transform: uppercase;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+.footer-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 85px;
+    text-align: center;
+}
+
+.footer-social-links {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item {
+    padding: .2rem;
+}
 
 .footer-img {
     width: 200px;
@@ -767,10 +785,7 @@ figure h3 {
     width: 100%;
 }
 
-.footer-social-links {
-    padding-top: 20px;
-    display: flex;
-}
+
 .footer-ul {
     padding-top: 20px;
     padding: 5px;
@@ -788,19 +803,22 @@ figure h3 {
     #main-footer {
        display: flex;
        flex-direction: column;
-       justify-content: center;
+       /* justify-content: center; */
+       text-align: left;
     }
+
+    .footer-footer {
+        text-align: left;
+    }
+
     .footer-head {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         padding-top: 100px;
+        width: 100%;
     }
-    .footer-footer {
-        display: flex;
-        flex-direction: column;
-        padding: 85px;
-    }
+
     .copy-right-p {
         display: flex;
         flex-direction: row;
